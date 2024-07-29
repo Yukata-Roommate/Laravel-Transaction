@@ -2,17 +2,17 @@
 
 namespace YukataRm\Laravel\Transaction\Provider;
 
-use Illuminate\Support\ServiceProvider as Provider;
+use Illuminate\Support\ServiceProvider;
 
-use YukataRm\Laravel\Transaction\Facade\Transaction;
 use YukataRm\Laravel\Transaction\Facade\Manager;
+use YukataRm\Laravel\Transaction\Facade\Transaction;
 
 /**
- * ServiceProvider
+ * Facade Service Provider
  * 
  * @package YukataRm\Laravel\Transaction\Provider
  */
-class ServiceProvider extends Provider
+class FacadeServiceProvider extends ServiceProvider
 {
     /**
      * Register Facade

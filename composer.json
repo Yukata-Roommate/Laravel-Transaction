@@ -3,7 +3,7 @@
     "description": "Easy to use transaction management for Laravel",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "YukataRm\\Laravel\\Transaction\\": "src"
@@ -12,7 +12,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "YukataRm\\Laravel\\Transaction\\Provider\\ServiceProvider"
+                "YukataRm\\Laravel\\Transaction\\Provider\\FacadeServiceProvider"
             ],
             "aliases": {
                 "Transaction": "YukataRm\\Laravel\\Transaction\\Facade\\Transaction"
