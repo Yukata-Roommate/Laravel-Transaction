@@ -15,7 +15,7 @@ use YukataRm\Laravel\Transaction\Facade\Transaction;
 class FacadeServiceProvider extends ServiceProvider
 {
     /**
-     * Register Facade
+     * register Facade
      * 
      * @return void
      */
