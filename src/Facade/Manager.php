@@ -32,6 +32,6 @@ class Manager
      */
     public function execute(Closure $transactional): void
     {
-        return $this->make()->execute($transactional);
+        $this->make()->execute($transactional);
     }
 }
