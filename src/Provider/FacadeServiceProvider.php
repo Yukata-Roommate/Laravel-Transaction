@@ -2,7 +2,7 @@
 
 namespace YukataRm\Laravel\Transaction\Provider;
 
-use Illuminate\Support\ServiceProvider;
+use YukataRm\Laravel\Provider\FacadeServiceProvider as BaseServiceProvider;
 
 use YukataRm\Laravel\Transaction\Facade\Manager;
 use YukataRm\Laravel\Transaction\Facade\Transaction;
@@ -12,17 +12,17 @@ use YukataRm\Laravel\Transaction\Facade\Transaction;
  * 
  * @package YukataRm\Laravel\Transaction\Provider
  */
-class FacadeServiceProvider extends ServiceProvider
+class FacadeServiceProvider extends BaseServiceProvider
 {
     /**
-     * register Facade
+     * get facades
      * 
-     * @return void
+     * @return array<string, string>
      */
-    public function register(): void
+    protected function facades(): array
     {
-        $this->app->singleton(Transaction::class, function () {
-            return new Manager();
-        });
+        return [
+            Transaction::class => Manager::class
+        ];
     }
 }
